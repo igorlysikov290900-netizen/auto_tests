@@ -11,4 +11,5 @@ class TestUserLogin:
         send_keys(driver, LoginLocators.email_field, email)
         send_keys(driver, LoginLocators.password_field, password)
         click_button(driver, LoginLocators.login_button)
-        assert get_text(driver, LoginLocators.user_name) == 'User.' and is_element_visible(driver, LoginLocators.user_logo) == True
+        assert get_text(driver, LoginLocators.user_name) == 'User.' 
+        assert is_element_visible(driver, LoginLocators.user_logo) == True

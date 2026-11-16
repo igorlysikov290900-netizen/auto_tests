@@ -40,3 +40,4 @@ class LoginLocators:
     checkmarks = [new_checkmark, used_checkmark]
     create_ad_button = (By.XPATH, '//button[text()="Опубликовать"]')
     created_ad_name = (By.XPATH, '//h2[text()="test 123"]')
+    ads_columns = (By.XPATH, '//img')

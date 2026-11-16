@@ -13,4 +13,7 @@ class TestUserLogout:
         send_keys(driver, LoginLocators.password_field, password)
         click_button(driver, LoginLocators.login_button)
         click_button(driver, LoginLocators.logout_button)
-        assert get_text(driver, LoginLocators.add_ad_button) == 'Разместить объявление' and get_text(driver, LoginLocators.login_window_button) == 'Вход и регистрация' and is_element_visible(driver, LoginLocators.user_name) == False and is_element_visible(driver, LoginLocators.user_logo) == False
+        assert get_text(driver, LoginLocators.add_ad_button) == 'Разместить объявление' 
+        assert get_text(driver, LoginLocators.login_window_button) == 'Вход и регистрация' 
+        assert is_element_visible(driver, LoginLocators.user_name) == False 
+        assert is_element_visible(driver, LoginLocators.user_logo) == False
