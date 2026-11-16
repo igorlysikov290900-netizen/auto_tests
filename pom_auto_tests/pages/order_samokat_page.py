@@ -10,7 +10,7 @@ class OrderSamokatPage(BasePage):
         super().__init__(driver)
         self.name_field = OrderPageLocators.name_field
         self.surname_field = OrderPageLocators.surname_field
-        self.adress_field = OrderPageLocators.adress
+        self.address_field = OrderPageLocators.address
         self.metro_station_list = OrderPageLocators.metro_station_list
         self.metro_option = OrderPageLocators.metro_option
         self.phone_number_field = OrderPageLocators.phone_number
@@ -19,7 +19,7 @@ class OrderSamokatPage(BasePage):
         self.date = OrderPageLocators.date
         self.rent_time = OrderPageLocators.rent_time
         self.rent_time_button = OrderPageLocators.rent_time_button
-        self.collor = OrderPageLocators.collor
+        self.color = OrderPageLocators.color
         self.order_button = OrderPageLocators.order_button
         self.accept_button = OrderPageLocators.accept_button
         self.accept_message = OrderPageLocators.accept_message
@@ -33,10 +33,10 @@ class OrderSamokatPage(BasePage):
         WebDriverWait(self.driver, 3).until(expected_conditions.element_to_be_clickable(self.cookie_accept)).click()
 
     @allure.step('Оформляем заказ')
-    def order_samokat(self, name, surname, adress, phone):
+    def order_samokat(self, name, surname, address, phone):
         self.send_text(self.name_field, name)
         self.send_text(self.surname_field, surname)
-        self.send_text(self.adress_field, adress)
+        self.send_text(self.address_field, address)
         self.click_button(self.metro_station_list)
         self.click_button(self.metro_option)
         self.send_text(self.phone_number_field, phone)
@@ -44,7 +44,7 @@ class OrderSamokatPage(BasePage):
         self.click_button(self.date_field)
         self.click_button(self.rent_time)
         self.click_button(self.rent_time_button)
-        self.click_button(self.collor)
+        self.click_button(self.color)
         self.click_button(self.order_button)
         self.click_button(self.accept_button)
 

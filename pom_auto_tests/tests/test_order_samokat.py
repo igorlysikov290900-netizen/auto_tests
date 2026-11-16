@@ -6,7 +6,7 @@ from pages.order_samokat_page import OrderSamokatPage
 from locators.order_page_locators import OrderPageLocators
 
 @allure.title('Проверка оформления заказа')
-@allure.description('На базовой странице ищем элемент заказа через параметизацию, вносим все необходимые наборы данных, оформляем заказ и проверяем ссылки в шапке страницы')
+@allure.description('На базовой странице ищем элемент заказа, вносим все необходимые наборы данных, оформляем заказ и проверяем ссылки в шапке страницы')
 class TestOrderSamokat:
     
     @pytest.mark.parametrize('name,surname,adress,buttons', list(zip(TestData.names, TestData.surnames, TestData.adresses, TestData.buttons)))
