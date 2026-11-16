@@ -9,7 +9,7 @@ from locators.order_page_locators import OrderPageLocators
 @allure.description('На базовой странице ищем элемент заказа, вносим все необходимые наборы данных, оформляем заказ и проверяем ссылки в шапке страницы')
 class TestOrderSamokat:
     
-    @pytest.mark.parametrize('name,surname,adress,buttons', list(zip(TestData.names, TestData.surnames, TestData.adresses, TestData.buttons)))
+    @pytest.mark.parametrize('name,surname,adress,buttons', list(zip(TestData.names, TestData.surnames, TestData.addresses, TestData.buttons)))
     def test_order(self, driver, name, surname, adress, buttons):
         phone = str(r.randint(10000000000, 99999999999))
         page = OrderSamokatPage(driver)

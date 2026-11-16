@@ -4,7 +4,7 @@ class TestData:
 
     names = ['Игорь', 'Игорян']
     surnames = ['Лысиков', 'Лысикян']
-    adresses = ['Пушкина', 'Колотушкина']
+    addresses = ['Пушкина', 'Колотушкина']
     buttons = [MainPageLocators.order_button_upper_menu, MainPageLocators.order_button_page_down]
 
 class Urls:
